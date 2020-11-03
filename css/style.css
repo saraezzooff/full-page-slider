@@ -1,0 +1,192 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* Global */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #FFE165;
+}
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav{
+    margin-top: 30px;
+    position: relative;
+    z-index: 1000;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 0 10px;
+}
+
+.banner{
+   
+    width: 100%;
+    max-height: 100vh;
+}
+
+.banner .imgbox{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.banner .imgbox img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: 0.3s;
+    background-position: center;
+}
+
+
+.banner .imgbox img.active{
+    opacity: 1;
+}
+
+/* Text Content */
+
+.content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 700px;
+}
+.content div h2{
+    color: #fff;
+    font-size: 2em;
+}
+
+.content div p{
+    color: #fff;
+    font-size: 1.1em;
+    padding-bottom: 5px;
+}
+
+.content div a{
+    text-decoration: none;
+    color: #111;
+    font-size: 1.1em;
+    padding: 10px 30px;
+    background-color: #fff;
+    display: inline-block;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: .3s ease;
+}
+
+.content div a:hover{
+    background-color: #ffdd93;
+    color: #111;
+}
+.content div{
+    display: none;
+}
+
+.content div.active{
+    display: block;
+    padding: 30px;
+    padding-left: 100px;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+/* Controls */
+.controls{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.controls .prev , .controls .next{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.controls .prev:hover , .controls .next:hover{
+    background-color: #ffdd93;
+}
+
+@media(max-width:500px){
+
+    /* Controls */
+.controls{
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.controls .prev , .controls .next{
+    width: 50px;
+    height: 50px;
+}
+
+.controls .prev img , .controls .next img{
+    width: 30px;
+    height: 30px;
+}
+
+
+/* Text Content */
+
+.content div h2{
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.content div p{
+    font-size: .8em;
+    margin-bottom: 5px;
+}
+
+.content div a{
+    font-size: .8em;
+    padding: 5px 20px;
+}
+}
